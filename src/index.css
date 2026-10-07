@@ -1,0 +1,531 @@
+/* ===========================
+   GLOBAL
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 15px 40px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.btn {
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+}
+
+/* ===========================
+   HOME
+=========================== */
+.home {
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 10%;
+  background: #f8fafc;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  background: #fff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.secondary-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+.features {
+  text-align: center;
+  padding: 70px 10%;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  background: #1e293b;
+  color: #fff;
+  padding: 50px 10% 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #475569;
+  padding-top: 15px;
+  color: #94a3b8;
+}
+
+/* ===========================
+   LOGIN
+=========================== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.login-card {
+  width: 350px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-card p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.login-card .input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.login-card .input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: bold;
+}
+
+.login-card .input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card .input-group input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-card button:hover {
+  background: #2196f3;
+}
+
+.login-card .footer-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-card .footer-text a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.login-card .footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   REGISTER
+=========================== */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.register-card {
+  width: 400px;
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.register-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.register-card p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.register-card .input-group {
+  margin-bottom: 18px;
+}
+
+.register-card .input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+}
+
+.register-card .input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.register-card .input-group input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+}
+
+.register-card button {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.register-card button:hover {
+  background: #2196f3;
+}
+
+.register-card .footer-text {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-card .footer-text a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-card .footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   PAGE NOT FOUND
+=========================== */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3f4850, #f0f2f2);
+  padding: 20px;
+}
+
+.notfound-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.notfound-card h1 {
+  font-size: 100px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.notfound-card h2 {
+  font-size: 32px;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.notfound-card p {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.home-btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .notfound-card {
+    padding: 30px 20px;
+  }
+
+  .notfound-card h1 {
+    font-size: 70px;
+  }
+
+  .notfound-card h2 {
+    font-size: 24px;
+  }
+
+  .notfound-card p {
+    font-size: 15px;
+  }
+
+  .home-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .register-card h2 {
+    font-size: 24px;
+  }
+
+  .register-card .input-group input,
+  .register-card button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
